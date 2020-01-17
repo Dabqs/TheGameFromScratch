@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TheGameFromScratch.Game
+namespace TheGameFromScratch.Units
 {
     class Hero : Unit
     {
@@ -19,6 +19,11 @@ namespace TheGameFromScratch.Game
         public void MoveLeft()
         {
             X--;
+        }
+
+        public int GetX()
+        {
+            return X;
         }
     }
 }

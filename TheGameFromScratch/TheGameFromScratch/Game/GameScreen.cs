@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TheGameFromScratch.Game
+namespace TheGameFromScratch.Units
 {
     class GameScreen
     {
@@ -25,11 +25,17 @@ namespace TheGameFromScratch.Game
         }
         public void MoveHeroRight()
         {
+            if (hero.GetX() < width)
+            {
             hero.MoveRight();
+            }
         }
         public void MoveHeroLeft()
         {
-            hero.MoveLeft();
+            if (hero.GetX() > 0)
+            {
+                hero.MoveLeft();
+            }
         }
         public void AddEnemy(Enemy enemy)
         {
