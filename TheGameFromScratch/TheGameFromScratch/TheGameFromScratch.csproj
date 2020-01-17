@@ -46,6 +46,7 @@
     <Compile Include="Game\Enemy.cs" />
     <Compile Include="Game\GameScreen.cs" />
     <Compile Include="Game\Hero.cs" />
+    <Compile Include="Game\Unit.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

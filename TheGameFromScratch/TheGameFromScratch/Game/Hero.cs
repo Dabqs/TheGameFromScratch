@@ -6,17 +6,10 @@ using System.Threading.Tasks;
 
 namespace TheGameFromScratch.Game
 {
-    class Hero
+    class Hero : Unit
     {
-        protected int X;
-        protected int Y;
-        protected string Name;
-
-        public Hero(int x, int y, string name)
+        public Hero(int x, int y, string name) : base(x,y, name)
         {
-            X = x;
-            Y = y;
-            Name = name;
         }
 
         public void MoveRight()
@@ -26,10 +19,6 @@ namespace TheGameFromScratch.Game
         public void MoveLeft()
         {
             X--;
-        }
-        public void PrintInfo()
-        {
-            Console.WriteLine($"Hero {Name} is at [{X};{Y}]");
         }
     }
 }
