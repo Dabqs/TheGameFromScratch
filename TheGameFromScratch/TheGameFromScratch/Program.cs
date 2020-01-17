@@ -11,7 +11,9 @@ namespace TheGameFromScratch
     {
         static void Main(string[] args)
         {
-            GameScreen myGame = new GameScreen(120,30);
+            ConsoleKeyInfo keyinfo = new ConsoleKeyInfo();
+            bool needToRender = true;
+            GameScreen myGame = new GameScreen(120, 30);
             myGame.SetHero(new Hero(0, 0, "Mantas"));
 
             Random rnd = new Random();
@@ -20,12 +22,32 @@ namespace TheGameFromScratch
                 myGame.AddEnemy(new Enemy(rnd.Next(0, 10), rnd.Next(0, 10), "Enemy" + i, i));
             }
 
-            myGame.Render();
-            Console.ReadLine();
-            myGame.MoveHeroLeft();
-            myGame.MoveAllEnemiesDown();
-            myGame.Render();
+            do
+            {
+                Console.Clear();
+                while (Console.KeyAvailable)
+                {
+                    keyinfo = Console.ReadKey(true);
+                    switch (keyinfo.Key)
+                    {
+                        case ConsoleKey.RightArrow:
+                            myGame.MoveHeroRight();
+                            break;
+                        case ConsoleKey.LeftArrow:
+                            myGame.MoveHeroLeft();
+                            break;
+                        case ConsoleKey.Escape:
+                            needToRender = false;
+                            break;
+                        default:
+                            break;
+                    }
+                }
 
+                myGame.Render();
+                System.Threading.Thread.Sleep(250);
+
+            } while (needToRender);
         }
     }
 }
