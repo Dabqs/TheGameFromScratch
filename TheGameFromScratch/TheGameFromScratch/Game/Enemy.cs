@@ -30,5 +30,10 @@ namespace TheGameFromScratch.Game
             Console.WriteLine($"Enemy {Name} is at [{X};{Y}] (ID: {id})");
         }
 
+        public int GetId()
+        {
+            return id;
+        }
+
     }
 }
