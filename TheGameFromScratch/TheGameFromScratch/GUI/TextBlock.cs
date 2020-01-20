@@ -9,16 +9,19 @@ namespace TheGameFromScratch.GUI
     class TextBlock : GuiObject
     {
         private readonly List<TextLine> textLines = new List<TextLine>();
-        public TextBlock(int x, int y, int width, List<string> textLines ) : base(x, y, width, 0)
+        public TextBlock(int x, int y, int width, List<string> textLines) : base(x, y, width, 0)
         {
-            foreach (string textLine in textLines)
+            for (int i = 0; i < textLines.Count; i++)
             {
-                this.textLines.Add(new TextLine(textLine, X, Y + textLines.IndexOf(textLine), Width));
+                this.textLines.Add(new TextLine(textLines[i], X, Y + i, Width));
             }
         }
         public void Render()
         {
-
+            foreach (TextLine textLine in textLines)
+            {
+                textLine.Render();
+            }
         }
     }
 }

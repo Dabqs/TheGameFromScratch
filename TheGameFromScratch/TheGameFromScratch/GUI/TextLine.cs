@@ -15,7 +15,23 @@ namespace TheGameFromScratch.GUI
         }
         public void Render()
         {
+            Console.SetCursorPosition(X, Y);
 
+            if (Width > data.Length)
+            {
+                int offset = (Width - data.Length) / 2;
+                for (int i = 0; i < offset; i++)
+                {
+                    Console.Write(' ');
+                }
+            }
+            for (int i = 0; i < data.Length; i++)
+            {
+                if (i <= Width)
+                {
+                    Console.Write(data[i]);
+                }
+            }
         }
     }
 }

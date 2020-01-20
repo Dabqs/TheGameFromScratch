@@ -31,7 +31,13 @@ namespace TheGameFromScratch.GUI
         }
         public void Render()
         {
+            base.Render();
+            titleTextBlock.Render();
+            startButton.Render();
+            creditsButton.Render();
+            quitButton.Render();
 
+            Console.SetCursorPosition(0, 0);
         }
     }
 }

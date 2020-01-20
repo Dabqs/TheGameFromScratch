@@ -14,14 +14,23 @@ namespace TheGameFromScratch.GUI
         private TextLine textLine;
         public Button(int x, int y, int width, int height, string buttonCaption) : base(x, y, width, height)
         {
-            textLine = new TextLine(buttonCaption, x+1, y +1 +((height-2)/2), width -2);
+            textLine = new TextLine(buttonCaption, x +1, y +1 +((height-2)/2), width -2);
             isActive = false;
-            activeFrame = new Frame(x, y, width, height, '+');
-            notActiveFrame = new Frame(x, y, width, height, '#');
+            activeFrame = new Frame(x, y, width, height, '#');
+            notActiveFrame = new Frame(x, y, width, height, '+');
         }
         public void Render()
         {
+            if (isActive)
+            {
+                activeFrame.Render();
+            }
+            else
+            {
+                notActiveFrame.Render();
+            }
 
+            textLine.Render();
         }
         public void SetActive()
         {

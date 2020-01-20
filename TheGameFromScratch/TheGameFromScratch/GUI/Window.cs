@@ -8,7 +8,7 @@ namespace TheGameFromScratch.GUI
 {
     class Window : GuiObject
     {
-        private Frame border;
+        protected Frame border;
         public Window(int x, int y, int width, int height, char borderChar) : base(x, y, width, height)
         {
             X = x;
@@ -19,7 +19,7 @@ namespace TheGameFromScratch.GUI
         }
         public void Render()
         {
-
+            border.Render();
         }
     }
 }

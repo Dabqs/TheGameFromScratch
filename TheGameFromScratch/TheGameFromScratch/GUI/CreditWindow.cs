@@ -11,16 +11,15 @@ namespace TheGameFromScratch.GUI
         private int x = 28;
         private int y = 10;
         private int width = 60;
-        private int height = 18;
 
         private Button backButton;
         private TextBlock creditTextBlock;
         public CreditWindow(int x, int y, int width, int height, char borderChar) : base(x, y, width, height, '@')
         {
-            backButton = new Button(this.x +20, this.y +14, 18, 3, "Back");
+            backButton = new Button(this.x + 20, this.y + 14, 18, 3, "Back");
             backButton.SetActive();
-            creditTextBlock = new TextBlock(this.x +1, this.y +1 , this.width -1,
-                new List<string> { 
+            creditTextBlock = new TextBlock(this.x + 1, this.y + 1, this.width - 1,
+                new List<string> {
                 String.Empty,
                 "Game design:",
                 "Mantas Dapkus",
@@ -36,8 +35,21 @@ namespace TheGameFromScratch.GUI
                 String.Empty});
         }
         public void Render()
+        {
+            for (int i = 1; i < Height - 2; i++)
             {
-
+                Console.SetCursorPosition(X, Y + i);
+                for (int j = 1; j < Width; j++)
+                {
+                    Console.Write(' ');
+                }
+                Console.WriteLine();
             }
+            base.Render();
+            creditTextBlock.Render();
+            backButton.Render();
+
+            Console.SetCursorPosition(0, 0);
         }
     }
+}

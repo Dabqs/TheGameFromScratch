@@ -19,6 +19,10 @@ namespace TheGameFromScratch
             Console.CursorVisible = false;
             GameWindow gameWindow = new GameWindow(0, 0, 120, 30, '%');
             gameWindow.Render();
+            Console.ReadLine();
+            CreditWindow creditWindow = new CreditWindow(28,10,60,18,'%');
+            creditWindow.Render();
+
         }
     }
 }
