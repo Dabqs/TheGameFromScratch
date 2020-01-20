@@ -16,7 +16,7 @@ namespace TheGameFromScratch.GUI
                 this.textLines.Add(new TextLine(textLines[i], X, Y + i, Width));
             }
         }
-        public void Render()
+        public override void Render()
         {
             foreach (TextLine textLine in textLines)
             {

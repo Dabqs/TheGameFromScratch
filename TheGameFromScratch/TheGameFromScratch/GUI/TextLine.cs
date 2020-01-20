@@ -8,28 +8,37 @@ namespace TheGameFromScratch.GUI
 {
     class TextLine : GuiObject
     {
-        private readonly string data;
+        public string Label
+        {
+            get { return label; }
+            set
+            {
+                label = value ;
+                Render();
+            }
+        }
+        private string label;
         public TextLine(string data, int x, int y, int width) : base(x, y, width, 0)
         {
-            this.data = data;
+            Label = data;
         }
         public override void Render()
         {
             Console.SetCursorPosition(X, Y);
 
-            if (Width > data.Length)
+            if (Width > Label.Length)
             {
-                int offset = (Width - data.Length) / 2;
+                int offset = (Width - Label.Length) / 2;
                 for (int i = 0; i < offset; i++)
                 {
                     Console.Write(' ');
                 }
             }
-            for (int i = 0; i < data.Length; i++)
+            for (int i = 0; i < Label.Length; i++)
             {
                 if (i <= Width)
                 {
-                    Console.Write(data[i]);
+                    Console.Write(Label[i]);
                 }
             }
         }

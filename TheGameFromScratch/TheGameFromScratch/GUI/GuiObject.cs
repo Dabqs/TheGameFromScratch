@@ -8,10 +8,10 @@ namespace TheGameFromScratch.GUI
 {
     abstract class GuiObject
     {
-        protected int Height;
-        protected int Width;
-        protected int X;
-        protected int Y;
+        public int Height { get; set; }
+        public int Width { get; set; }
+        public int X { get; set; }
+        public int Y { get; set; }
 
         public GuiObject(int x, int y, int width, int height)
         {
@@ -20,9 +20,6 @@ namespace TheGameFromScratch.GUI
             Width = width;
             Height = height;
         }
-        public virtual void Render()
-        {
-
-        }
+        abstract public void Render();
     }
 }
