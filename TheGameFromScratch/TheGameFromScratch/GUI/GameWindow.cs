@@ -25,11 +25,10 @@ namespace TheGameFromScratch.GUI
                 "Super duper zaidimas", 
                 "Manto Dapkaus kuryba",
                 "Made in Vilnius Coding School!"
-                
             });
             startButton.SetActive();
         }
-        public void Render()
+        public override void Render()
         {
             base.Render();
             titleTextBlock.Render();

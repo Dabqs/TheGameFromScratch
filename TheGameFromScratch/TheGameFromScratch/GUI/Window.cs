@@ -17,7 +17,7 @@ namespace TheGameFromScratch.GUI
             Height = height;
             border = new Frame(x, y, width, height, borderChar);
         }
-        public void Render()
+        public override void Render()
         {
             border.Render();
         }

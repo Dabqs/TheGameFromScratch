@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TheGameFromScratch.GUI
 {
-    class GuiObject
+    abstract class GuiObject
     {
         protected int Height;
         protected int Width;
@@ -19,6 +19,10 @@ namespace TheGameFromScratch.GUI
             Y = y;
             Width = width;
             Height = height;
+        }
+        public virtual void Render()
+        {
+
         }
     }
 }

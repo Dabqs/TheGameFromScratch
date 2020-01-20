@@ -13,7 +13,7 @@ namespace TheGameFromScratch.GUI
         {
             this.data = data;
         }
-        public void Render()
+        public override void Render()
         {
             Console.SetCursorPosition(X, Y);
 

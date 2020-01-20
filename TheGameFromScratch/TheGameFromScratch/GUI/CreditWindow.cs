@@ -34,7 +34,7 @@ namespace TheGameFromScratch.GUI
                 "Mantas Dapkus",
                 String.Empty});
         }
-        public void Render()
+        public override void Render()
         {
             for (int i = 1; i < Height - 2; i++)
             {

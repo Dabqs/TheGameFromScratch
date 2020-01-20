@@ -19,7 +19,7 @@ namespace TheGameFromScratch.GUI
             activeFrame = new Frame(x, y, width, height, '#');
             notActiveFrame = new Frame(x, y, width, height, '+');
         }
-        public void Render()
+        public override void Render()
         {
             if (isActive)
             {
