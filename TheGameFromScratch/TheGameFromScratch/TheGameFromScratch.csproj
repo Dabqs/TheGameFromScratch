@@ -44,6 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Game\GameController.cs" />
+    <Compile Include="GUI\Button.cs" />
+    <Compile Include="GUI\CreditWindow.cs" />
+    <Compile Include="GUI\Frame.cs" />
+    <Compile Include="GUI\GameWindow.cs" />
+    <Compile Include="GUI\GuiObject.cs" />
+    <Compile Include="GUI\TextBlock.cs" />
+    <Compile Include="GUI\TextLine.cs" />
+    <Compile Include="GUI\Window.cs" />
     <Compile Include="Units\Enemy.cs" />
     <Compile Include="Game\GameScreen.cs" />
     <Compile Include="Units\Hero.cs" />
@@ -54,5 +62,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
