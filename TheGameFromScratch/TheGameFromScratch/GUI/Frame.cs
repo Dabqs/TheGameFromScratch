@@ -13,5 +13,9 @@ namespace TheGameFromScratch.GUI
         {
             this.renderChar = renderChar;
         }
+        public void Render()
+        {
+
+        }
     }
 }

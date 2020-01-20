@@ -13,7 +13,7 @@ namespace TheGameFromScratch.GUI
         {
             foreach (string textLine in textLines)
             {
-                this.textLines.Add(new TextLine(textLine, X, Y, Width));
+                this.textLines.Add(new TextLine(textLine, X, Y + textLines.IndexOf(textLine), Width));
             }
         }
         public void Render()

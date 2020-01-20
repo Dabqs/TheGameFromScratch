@@ -11,7 +11,11 @@ namespace TheGameFromScratch.GUI
         private Frame border;
         public Window(int x, int y, int width, int height, char borderChar) : base(x, y, width, height)
         {
-            border = new Frame(X, Y, Width, Height, borderChar);
+            X = x;
+            Y = y;
+            Width = width;
+            Height = height;
+            border = new Frame(x, y, width, height, borderChar);
         }
         public void Render()
         {

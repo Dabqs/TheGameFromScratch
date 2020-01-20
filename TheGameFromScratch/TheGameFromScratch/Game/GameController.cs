@@ -10,10 +10,12 @@ namespace TheGameFromScratch.Game
     class GameController
     {
         private GameScreen myGame;
+        /*
         public GameController(int screenWidth, int screenHeight)
         {
             this.myGame = new GameScreen(screenWidth, screenHeight);
         }
+        //*/
         public void StartGame()
         {
             InitGame();
@@ -21,8 +23,8 @@ namespace TheGameFromScratch.Game
         }
         public void InitGame()
         {
-
-            myGame.SetHero(new Hero(0, 0, "Mantas"));
+            myGame = new GameScreen(30, 20);
+            myGame.SetHero(new Hero(5, 5, "Mantas"));
 
             Random rnd = new Random();
             for (int i = 0; i < 10; i++)
@@ -50,8 +52,6 @@ namespace TheGameFromScratch.Game
                             break;
                         case ConsoleKey.Escape:
                             needToRender = false;
-                            break;
-                        default:
                             break;
                     }
                 }

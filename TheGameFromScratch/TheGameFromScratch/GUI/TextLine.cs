@@ -9,7 +9,7 @@ namespace TheGameFromScratch.GUI
     class TextLine : GuiObject
     {
         private readonly string data;
-        public TextLine(string data, int x, int y, int width) : base(x, y, width, 1)
+        public TextLine(string data, int x, int y, int width) : base(x, y, width, 0)
         {
             this.data = data;
         }
