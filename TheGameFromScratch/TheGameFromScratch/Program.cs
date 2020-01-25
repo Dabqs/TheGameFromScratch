@@ -17,11 +17,14 @@ namespace TheGameFromScratch
             //GameController myGame = new GameController(10,10);
 
             Console.CursorVisible = false;
-            GameWindow gameWindow = new GameWindow(0, 0, 120, 30, '%');
-            gameWindow.Render();
+            //GameWindow gameWindow = new GameWindow(0, 0, 120, 30, '%');
+            //gameWindow.Render();
+            GuiController guiController = new GuiController();
+            guiController.ShowMenu();
+
             Console.ReadLine();
-            CreditWindow creditWindow = new CreditWindow(28,10,60,18,'%');
-            creditWindow.Render();
+            guiController.ShowCreditWindow();
+
 
         }
     }

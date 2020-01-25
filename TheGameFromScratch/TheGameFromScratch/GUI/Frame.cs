@@ -24,6 +24,16 @@ namespace TheGameFromScratch.GUI
         }
         public override void Render()
         {
+            //clean frame area
+            Console.SetCursorPosition(X, Y);
+            for (int i = 0; i < Height; i++)
+            {
+                for (int j = 0; j < Width; j++)
+                {
+                    Console.Write(' ');
+                }
+                Console.SetCursorPosition(X, Y + i);
+            }
             Console.SetCursorPosition(X, Y);
             for (int i = 0; i < Height; i++)
             {

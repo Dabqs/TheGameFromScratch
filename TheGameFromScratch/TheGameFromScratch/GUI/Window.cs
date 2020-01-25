@@ -20,6 +20,7 @@ namespace TheGameFromScratch.GUI
         public override void Render()
         {
             border.Render();
+
         }
     }
 }
