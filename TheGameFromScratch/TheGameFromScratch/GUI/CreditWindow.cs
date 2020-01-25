@@ -36,7 +36,6 @@ namespace TheGameFromScratch.GUI
         }
         public override void Render()
         {
-            //clean credit window space
             for (int i = 1; i < Height - 2; i++)
             {
                 Console.SetCursorPosition(X, Y + i);

@@ -13,20 +13,9 @@ namespace TheGameFromScratch
     {
         static void Main(string[] args)
         {
-            //myGame.StartGame();
-            //GameController myGame = new GameController(10,10);
-
             Console.CursorVisible = false;
-            //GameWindow gameWindow = new GameWindow(0, 0, 120, 30, '%');
-            //gameWindow.Render();
             GuiController guiController = new GuiController();
             guiController.ShowMenu();
-
-
-          //  Console.ReadLine();
-            //guiController.ShowCreditWindow();
-
-
         }
     }
 }

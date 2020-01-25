@@ -9,25 +9,20 @@ namespace TheGameFromScratch.Game
 {
     class GuiController
     {
-        private GameWindow gameWindow;
+        private GameWindow gameWindow = new GameWindow(0, 0, 120, 30, '%');
         private CreditWindow creditWindow;
         private GameController gameController = new GameController();
 
-
         public void ShowMenu()
         {
-            gameWindow = new GameWindow(0, 0, 120, 30, '%');
-            Console.Clear();
             gameWindow.Render();
             ActivateMainMenu();
-
         }
         public void ShowCreditWindow()
         {
             creditWindow = new CreditWindow(28, 10, 60, 18, '%');
             creditWindow.Render();
             ActivateCreditMenu();
-
         }
         public void ActivateCreditMenu()
         {
@@ -40,7 +35,6 @@ namespace TheGameFromScratch.Game
                     {
                         ShowMenu();
                     }
-                    
                 }
             } while (true);
         }
@@ -76,12 +70,10 @@ namespace TheGameFromScratch.Game
                             }
                             break;
                         case ConsoleKey.LeftArrow:
-                            Console.Clear();
                             ChangeActiveButton(gameWindow.GetActiveButtonIndex()-1);
                             gameWindow.Render();
                             break;
                         case ConsoleKey.RightArrow:
-                            Console.Clear();
                             ChangeActiveButton(gameWindow.GetActiveButtonIndex() + 1);
                             gameWindow.Render();
                             break;

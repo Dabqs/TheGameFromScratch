@@ -10,12 +10,7 @@ namespace TheGameFromScratch.Game
     class GameController
     {
         private GameScreen myGame;
-        /*
-        public GameController(int screenWidth, int screenHeight)
-        {
-            this.myGame = new GameScreen(screenWidth, screenHeight);
-        }
-        //*/
+
         public void StartGame()
         {
             InitGame();
@@ -51,7 +46,8 @@ namespace TheGameFromScratch.Game
                             myGame.MoveHeroLeft();
                             break;
                         case ConsoleKey.Escape:
-                            needToRender = false;
+                            GuiController guiController = new GuiController();
+                            guiController.ShowMenu();
                             break;
                     }
                 }

@@ -27,7 +27,6 @@ namespace TheGameFromScratch.GUI
                 "Manto Dapkaus kuryba",
                 "Made in Vilnius Coding School!"
             });
-            //menuButtons.Where(button => button.Label.Equals("Start")).FirstOrDefault().SetActive();
         }
         public override void Render()
         {
