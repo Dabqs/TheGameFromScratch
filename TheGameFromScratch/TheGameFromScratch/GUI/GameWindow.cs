@@ -39,5 +39,9 @@ namespace TheGameFromScratch.GUI
             titleTextBlock.Render();
             Console.SetCursorPosition(0, 0);
         }
+        public int GetActiveButtonIndex()
+        {
+            return menuButtons.IndexOf(menuButtons.Where(button => button.IsActive).FirstOrDefault());
+        }
     }
 }

@@ -42,5 +42,9 @@ namespace TheGameFromScratch.GUI
         {
             IsActive = true;
         }
+        public void Deactivate()
+        {
+            IsActive = false;
+        }
     }
 }

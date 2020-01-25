@@ -22,8 +22,9 @@ namespace TheGameFromScratch
             GuiController guiController = new GuiController();
             guiController.ShowMenu();
 
-            Console.ReadLine();
-            guiController.ShowCreditWindow();
+
+          //  Console.ReadLine();
+            //guiController.ShowCreditWindow();
 
 
         }
